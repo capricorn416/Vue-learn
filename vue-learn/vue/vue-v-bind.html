@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<span @click="left" v-show="index!=0"><<</span>
+			<img v-bind:src="imgArr[index]" />
+			<span @click="right" v-show="index<imgArr.length-1" >>></span>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:"#app",
+				data:{
+					imgArr:["../img/1.jpeg","../img/2.jpeg","../img/3.jpeg"],
+					index:0,
+					isshow1:true,
+					isshow2:true
+				},
+				methods:{
+					right:function(){
+						if(this.index<2){
+							this.index++;
+							this.isshow1=!this.isshow1; //?
+						}
+					},
+					left:function(){
+						if(this.index>0){
+							this.index--;
+							this.isshow2=true;
+						}
+						else this.ishow2=false;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

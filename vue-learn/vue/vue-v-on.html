@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--4.30>
+		<div id="app">
+			{{ message }}
+			{{ school.mobile }}
+			{{ campus[0] }}
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script>
+			var app = new Vue({
+				//el: '#app',//挂载点
+				el:'div',
+				data: {
+					message: 'Hello Vue!',
+					school:{
+						name:'hust',
+						mobile:'12345'
+					},
+					campus:["1","2","3"]
+				}
+			})
+		</script>
+		<-->
+		<!-->
+		<div id="app">
+			
+			<h2 v-text="message+'!'">hello</h2> 替换所有内容
+			<h2>{{message+"!"}}</h2>
+			<-->
+			<!-->
+			<p v-html="content"></p>
+			<p v-text="content"></p>
+			<p>{{content}}</p>
+			v-on:为元素绑定事件
+			<input type="button" value="事件绑定" v-on:click="dolt"></input>
+			<input type="button" value="事件绑定" @dblclick="dolt"></input>
+			<p @click="changeFood">{{food}}</p>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:"#app",
+				data:{
+					message:"111",
+					content:"<a href='#'>hhh</a>",
+					food:"西蓝花炒蛋"
+				},
+				methods:{
+					dolt:function(){
+						alert("hi")
+					},
+					changeFood:function(){
+						this.food+="很好吃"
+					}
+				}
+			})
+		</script>
+		<-->
+		<br>
+		<div id="app1">
+			<button @click="add">+</button>
+			<span >{{ message }}</span>
+			<button @click="sub">-</button>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:"#app1",
+				data:{
+					message:"0"
+				},
+				methods:{
+					add:function(){
+						if(this.message<10){
+							this.message++;
+						}else{
+							alert("到达上限")
+						}
+					},
+					sub:function(){
+						if(this.message>0){
+							this.message--;
+						}else{
+							alert("到达下限")
+						}
+					}
+				}
+			})
+		</script>
+		
+		<div id="app2">
+			<button @click="displaychange"></button>
+			<span v-if="show" >显示/隐藏</span>
+			<span v-show="age>=18" >显示/隐藏</span>
+			<input v-bind:="mes" :class="{active:isActive}"></input>
+		</div>
+		
+		v-bind:属性名=表达式
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script>
+			var app2 = new Vue({
+				el:"#app2",
+				data:{
+					show:true,
+					age:19,
+					mes:hhh,
+					isActive:false
+				},
+				methods:{
+					displaychange:function(){
+						this.show=!this.show;
+						this.age = 16;
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
