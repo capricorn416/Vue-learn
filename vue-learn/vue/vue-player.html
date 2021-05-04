@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="css.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="mask"></div>
+		<div class="player" id="app">
+			<div class="top">
+				<font class="pl"><b>Capricorn416's player</b></font>
+				<div class="search">
+					<input type="txt" v-model="name" @keydown.enter="search">
+				</div>
+			</div>
+			<div class="body">
+				<div class="left">
+					<ul>
+						<li v-for="item in musicList"><a href="#" @click="play(item.id)">{{item.name}}</a></li>
+					</ul>
+				</div>
+				<span class="cover"><img :src="coverUrl"></img></span>
+				<div class="right"><font style='position: absolute; padding-left: 5px; padding-top: 10px;'>热门评论</font>
+					<div class="comment">
+					<dl v-for="item in musiccomment">
+						<dd>{{item.user.nickname}}</dd> 
+						<dd style="text-indent: 2em;">{{item.content}}</dd> 
+					</dl>
+					</div>
+				</div>
+			</div>
+			<div class="mask2"></div>
+			<div class="bottom">
+				<audio ref="audio" :src="musicUrl" controls autoplay loop class="myaudio"></audio>
+			</div>
+		</div>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="js.js">
+	</body>
+</html>

@@ -1,0 +1,154 @@
+.mask {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	z-index: 0;
+	opacity: 0.8;
+}
+
+.player {
+	position: fixed;
+	z-index: 100;
+	left: 270px;
+	top: 50px;
+	width: 800px;
+	height: 500px;
+	border-radius: 6px;
+	background-color: lightyellow;
+}
+
+.top {
+	background-color: pink;
+	height: 60px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.pl {
+	position: relative;
+	float: left;
+	top: 15px;
+	left: 22px;
+	font-size: 20px;
+	color: white;
+}
+
+.search {
+	position: relative;
+	float: right;
+	right: 25px;
+	top: 15px;
+	height: 30px;
+	width: 300px;
+	border-radius: 15px;
+	border: none;
+	outline-style: none;
+	background-color: #FFFFFF;
+	
+}
+
+input {
+	position: absolute;
+	left: 15px;
+	top: 0px;
+	bottom: 0px;
+	border: none;
+	outline-style: none;
+	width: 230px;
+}
+
+.body {
+	position: absolute;
+	left: 0px;
+	top: 60px;
+	right: 0px;
+	bottom: 40px;
+}
+
+.left {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	background-color: lightyellow;
+}
+
+.right {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 200px;
+	background-color: lightyellow;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	background-color: white;
+	height: 40px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	
+}
+
+ul {
+	line-height: 30px;
+	height: 90%;
+	overflow-y: auto;
+	list-style: none;
+}
+
+.myaudio {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.cover {
+	position: absolute;
+	z-index: 1000;
+	width: 250px;
+	height: 250px;
+	left: 275px;
+	top: 70px;
+	border-radius: 50%;
+	background-color: #000000;
+}
+
+img {
+	position: relative;
+	left: 50px;
+	top: 50px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.comment {
+	position: absolute;
+	top: 40px;
+	height: 85%;
+	overflow-y: auto;
+	width: 190px;
+}
+
+dl {
+	position: relative;
+	left: -35px;
+	width: 200px;
+}
